@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tAH-BE-1OG">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="59I-zx-iCM">
+            <objects>
+                <viewController id="tAH-BE-1OG" customClass="HomeViewController" customModule="Prototype3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsA-yn-BMG">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMd-TT-PCH">
+                                <rect key="frame" x="278" y="783.33333333333337" width="125" height="88.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FMd-TT-PCH" secondAttribute="height" multiplier="1.41:1" id="GKS-Xl-bVO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="buttonPressCancel:" destination="tAH-BE-1OG" eventType="touchUpOutside" id="W8v-cT-vTP"/>
+                                    <action selector="buttonPressed:" destination="tAH-BE-1OG" eventType="touchDown" id="jo4-Yq-QLo"/>
+                                    <action selector="buttonPressedConfirm:" destination="tAH-BE-1OG" eventType="touchUpInside" id="sQ2-KU-wsf"/>
+                                    <segue destination="XWr-2S-fL0" kind="show" id="fHq-S4-FAh"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Drop" translatesAutoresizingMaskIntoConstraints="NO" id="5a0-9c-7KL">
+                                <rect key="frame" x="278" y="783.33333333333337" width="125" height="88.666666666666629"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5a0-9c-7KL" secondAttribute="height" multiplier="1.41:1" id="cYL-YH-Luh"/>
+                                    <constraint firstAttribute="width" constant="125" id="hf4-gT-2nD"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HIo-tq-glw"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HIo-tq-glw" firstAttribute="bottom" secondItem="FMd-TT-PCH" secondAttribute="bottom" constant="20" id="3CY-M5-1aW"/>
+                            <constraint firstItem="HIo-tq-glw" firstAttribute="bottom" secondItem="5a0-9c-7KL" secondAttribute="bottom" constant="20" id="V2U-kT-II2"/>
+                            <constraint firstItem="HIo-tq-glw" firstAttribute="trailing" secondItem="5a0-9c-7KL" secondAttribute="trailing" constant="25" id="fxD-hd-lKr"/>
+                            <constraint firstItem="FMd-TT-PCH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HIo-tq-glw" secondAttribute="leading" symbolic="YES" id="h3k-NG-lvf"/>
+                            <constraint firstAttribute="trailing" secondItem="FMd-TT-PCH" secondAttribute="trailing" constant="25" id="n2C-8X-3mg"/>
+                            <constraint firstItem="FMd-TT-PCH" firstAttribute="width" secondItem="5a0-9c-7KL" secondAttribute="width" id="qkw-0e-q02"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dropUIImageView" destination="5a0-9c-7KL" id="e10-BE-wLI"/>
+                        <outlet property="dropWidthConstraint" destination="hf4-gT-2nD" id="8HB-bn-Fgc"/>
+                        <outlet property="dropXcoordConstraint" destination="fxD-hd-lKr" id="3Os-Cq-UBe"/>
+                        <outlet property="dropYcoordConstraint" destination="V2U-kT-II2" id="6Ox-wC-AIv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXd-QI-8cy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="784.05797101449286" y="56.919642857142854"/>
+        </scene>
+        <!--Programmes View Controller-->
+        <scene sceneID="Oba-Ww-uK6">
+            <objects>
+                <viewController storyboardIdentifier="programmesView" id="XWr-2S-fL0" customClass="ProgrammesViewController" customModule="Prototype3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yJI-Rz-YdK">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select programme:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="YPl-9m-tg4">
+                                <rect key="frame" x="21.333333333333343" y="77.333333333333329" width="385.33333333333326" height="54.999999999999986"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Hw-Ah-chb">
+                                <rect key="frame" x="50" y="182.33333333333334" width="137" height="137.00000000000003"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7Hw-Ah-chb" secondAttribute="height" multiplier="1:1" id="x4c-TR-jOo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Washer">
+                                    <backgroundConfiguration key="background" cornerRadius="100">
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Avenir-Light" family="Avenir" pointSize="23"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startWasherSelection:" destination="XWr-2S-fL0" eventType="touchUpInside" id="NJ9-E0-IDf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DI-yH-dpv">
+                                <rect key="frame" x="241" y="182.33333333333334" width="137" height="137.00000000000003"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2DI-yH-dpv" secondAttribute="height" multiplier="1:1" id="Lgg-t2-Qi8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Drier">
+                                    <backgroundConfiguration key="background" cornerRadius="100">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Avenir-Light" family="Avenir" pointSize="23"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="StartDrierSelection:" destination="XWr-2S-fL0" eventType="touchUpInside" id="4hf-9s-LQ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76w-Mi-ssd">
+                                <rect key="frame" x="128.33333333333331" y="698.66666666666663" width="171.33333333333331" height="69"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="40"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goBack:" destination="XWr-2S-fL0" eventType="touchUpInside" id="Tre-7Q-pPW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i9P-W2-ERo"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2DI-yH-dpv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7Hw-Ah-chb" secondAttribute="trailing" constant="8" symbolic="YES" id="2Iu-Wd-nyS"/>
+                            <constraint firstItem="YPl-9m-tg4" firstAttribute="centerX" secondItem="yJI-Rz-YdK" secondAttribute="centerX" id="Fa3-Rl-hkS"/>
+                            <constraint firstItem="i9P-W2-ERo" firstAttribute="trailing" secondItem="2DI-yH-dpv" secondAttribute="trailing" constant="50" id="G4y-9S-Tvd"/>
+                            <constraint firstItem="7Hw-Ah-chb" firstAttribute="leading" secondItem="i9P-W2-ERo" secondAttribute="leading" constant="50" id="KkD-4x-dc0"/>
+                            <constraint firstItem="YPl-9m-tg4" firstAttribute="width" secondItem="yJI-Rz-YdK" secondAttribute="width" multiplier="0.9" id="Mde-rG-aGG"/>
+                            <constraint firstItem="76w-Mi-ssd" firstAttribute="width" secondItem="yJI-Rz-YdK" secondAttribute="width" multiplier="0.4" id="ekS-uJ-lpL"/>
+                            <constraint firstItem="76w-Mi-ssd" firstAttribute="centerX" secondItem="yJI-Rz-YdK" secondAttribute="centerX" id="f83-ll-0nF"/>
+                            <constraint firstItem="2DI-yH-dpv" firstAttribute="width" secondItem="yJI-Rz-YdK" secondAttribute="width" multiplier="0.32" id="ikB-0f-d0K"/>
+                            <constraint firstItem="7Hw-Ah-chb" firstAttribute="top" secondItem="YPl-9m-tg4" secondAttribute="bottom" constant="50" id="lKp-B6-y4g"/>
+                            <constraint firstItem="2DI-yH-dpv" firstAttribute="top" secondItem="YPl-9m-tg4" secondAttribute="bottom" constant="50" id="lOS-wa-ZQC"/>
+                            <constraint firstItem="7Hw-Ah-chb" firstAttribute="width" secondItem="yJI-Rz-YdK" secondAttribute="width" multiplier="0.32" id="mCd-2Q-A5w"/>
+                            <constraint firstItem="76w-Mi-ssd" firstAttribute="centerY" secondItem="i9P-W2-ERo" secondAttribute="centerY" multiplier="1.75" id="ppH-b5-Ihj"/>
+                            <constraint firstItem="YPl-9m-tg4" firstAttribute="centerY" secondItem="i9P-W2-ERo" secondAttribute="centerY" multiplier="0.25" id="sIp-Nx-KCv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zcn-2W-9C9"/>
+                    <connections>
+                        <outlet property="drierNSLayoutConstraint" destination="lOS-wa-ZQC" id="iHX-PC-YDK"/>
+                        <outlet property="drierUIButton" destination="2DI-yH-dpv" id="zpZ-nx-v5s"/>
+                        <outlet property="goBackUIButton" destination="76w-Mi-ssd" id="k5b-1P-LLg"/>
+                        <outlet property="washerNSLayoutConstraint" destination="lKp-B6-y4g" id="i2I-NX-cPO"/>
+                        <outlet property="washerUIButton" destination="7Hw-Ah-chb" id="SRe-RM-WfW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6s-rQ-2LY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="56"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Drop" width="1250" height="884"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
