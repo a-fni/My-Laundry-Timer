@@ -16,6 +16,7 @@ A native iOS application written in Swift for tracking concurrent laundry applia
 - [Configuration & Tuning](#configuration--tuning)
 - [Laundry Programme Databases](#laundry-programme-databases)
 - [Known Limitations & Future Work](#known-limitations--future-work)
+- [Project History & Provenance](#project-history--provenance)
 - [License](#license)
 
 ---
@@ -265,6 +266,16 @@ To add or change cycle durations, edit these two arrays directly. No other code 
 - **`HomeViewController.reference` is a static singleton.** This works for the current single-screen architecture but would need to be replaced with a proper delegate or closure if the navigation hierarchy becomes more complex.
 - **No unit or UI tests.** The `Prototype3.xcodeproj` ships with no test targets.
 - **Xcode project name.** The Xcode scheme and bundle are named `Prototype3`, a remnant of the prototyping phase. This should be renamed to match the repository and product name before any App Store submission.
+
+---
+
+## Project History & Provenance
+
+This project was developed as a self-evaluation exercise at the conclusion of a Swift and iOS development course. The source code in this repository represents the final state of that project.
+
+**Commit history:** Only the final source is available here. The full development history was not retained, so the repository contains a minimal number of commits rather than an incremental record of the work done.
+
+**App Store publication:** The application was published to the Apple App Store by the course instructors as part of the course programme and is publicly available at [https://apps.apple.com/us/app/mylaundrytimer/id1624954423](https://apps.apple.com/us/app/mylaundrytimer/id1624954423). The original author of the code is the developer of this repository; the App Store listing is maintained by the course holders.
 
 ---
 
